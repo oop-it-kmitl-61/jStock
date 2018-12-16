@@ -5,6 +5,8 @@
  */
 package gui;
 
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -19,6 +21,7 @@ import javax.swing.event.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import util.Product;
@@ -121,7 +124,8 @@ public class Sale extends javax.swing.JPanel {
         allProducts.setGridColor(new java.awt.Color(189, 189, 189));
         allProducts.setIntercellSpacing(new java.awt.Dimension(5, 5));
         allProducts.setRowHeight(30);
-        allProducts.setSelectionBackground(new java.awt.Color(237, 108, 112));
+        allProducts.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        allProducts.setSelectionForeground(new java.awt.Color(66, 66, 66));
         allProducts.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(allProducts);
 
@@ -282,11 +286,11 @@ public class Sale extends javax.swing.JPanel {
         DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
         Date time = new Date();
         lbDateTime.setText("[" + dateFormat.format(date) + "] " + timeFormat.format(time));
-        
+
         TableRowSorter<TableModel> rowSorter = new TableRowSorter<>(allProducts.getModel());
         String text = tfSearch.getText();
 
-        tfSearch.getDocument().addDocumentListener(new DocumentListener(){
+        tfSearch.getDocument().addDocumentListener(new DocumentListener() {
 
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -316,11 +320,44 @@ public class Sale extends javax.swing.JPanel {
             }
 
         });
-        
-        allProducts.setRowSorter(rowSorter);
-    }
-    
 
+        allProducts.setRowSorter(rowSorter);
+        
+        allProducts.getColumnModel().getColumn(3).setCellRenderer(new ItemAlert());
+
+    }
+
+    public class ItemAlert extends JLabel implements TableCellRenderer {
+
+        public ItemAlert() {
+            setOpaque(true);
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(
+                JTable table, Object value,
+                boolean isSelected, boolean hasFocus,
+                int row, int column) {
+
+            if (Integer.valueOf(table.getValueAt(row, column).toString()) == 0) {
+                setBackground(new Color(255,180,191));
+                
+            } else if (Integer.valueOf(table.getValueAt(row, column).toString()) < 5) {
+                setBackground(new Color(253,253,150));
+                
+            } else {
+                setBackground(new Color(255,255,255));
+                
+            }
+            
+            setText(table.getValueAt(row, column).toString());
+            setFont(new java.awt.Font("Comfortaa", 0, 18));
+            setForeground(new Color(66,66,66));
+            setHorizontalAlignment(JLabel.RIGHT);
+
+            return this;
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable allProducts;

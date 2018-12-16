@@ -310,7 +310,41 @@ public class Edit extends javax.swing.JPanel {
         });
         
         allProducts.setRowSorter(rowSorter);
+        
+        allProducts.getColumnModel().getColumn(3).setCellRenderer(new ItemAlert());
 
+    }
+    
+    public class ItemAlert extends JLabel implements TableCellRenderer {
+
+        public ItemAlert() {
+            setOpaque(true);
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(
+                JTable table, Object value,
+                boolean isSelected, boolean hasFocus,
+                int row, int column) {
+
+            if (Integer.valueOf(table.getValueAt(row, column).toString()) == 0) {
+                setBackground(new Color(255,180,191));
+                
+            } else if (Integer.valueOf(table.getValueAt(row, column).toString()) < 5) {
+                setBackground(new Color(253,253,150));
+                
+            } else {
+                setBackground(new Color(255,255,255));
+                
+            }
+            
+            setText(table.getValueAt(row, column).toString());
+            setFont(new java.awt.Font("Comfortaa", 0, 18));
+            setForeground(new Color(66,66,66));
+            setHorizontalAlignment(JLabel.RIGHT);
+
+            return this;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

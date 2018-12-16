@@ -88,7 +88,7 @@ public class Edit extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false
@@ -104,7 +104,7 @@ public class Edit extends javax.swing.JPanel {
         });
         allProducts.setGridColor(new java.awt.Color(189, 189, 189));
         allProducts.setIntercellSpacing(new java.awt.Dimension(5, 5));
-        allProducts.setRowHeight(30);
+        allProducts.setRowHeight(40);
         allProducts.setSelectionBackground(new java.awt.Color(237, 108, 112));
         allProducts.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(allProducts);
@@ -242,6 +242,8 @@ public class Edit extends javax.swing.JPanel {
         ((DefaultTableCellRenderer) productsHeader.getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
         productsHeader.setForeground(new java.awt.Color(66, 66, 66));
         productsHeader.setPreferredSize(new Dimension(375, 30));
+        
+        ImageIcon icon = new ImageIcon("image.gif");
 
         allProducts.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
@@ -264,9 +266,10 @@ public class Edit extends javax.swing.JPanel {
         });
 
         DefaultTableModel model = (DefaultTableModel) allProducts.getModel();
+        ImageIcon icn = new ImageIcon(getClass().getResource("/images/icon_editItem.png"));
         for (Product p : stock.getProducts()) {
 
-            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), "Edit"});
+            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), icn});
         }
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

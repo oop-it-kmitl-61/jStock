@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -107,7 +108,7 @@ public class Sale extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false
@@ -123,7 +124,7 @@ public class Sale extends javax.swing.JPanel {
         });
         allProducts.setGridColor(new java.awt.Color(189, 189, 189));
         allProducts.setIntercellSpacing(new java.awt.Dimension(5, 5));
-        allProducts.setRowHeight(30);
+        allProducts.setRowHeight(40);
         allProducts.setSelectionBackground(new java.awt.Color(255, 255, 255));
         allProducts.setSelectionForeground(new java.awt.Color(66, 66, 66));
         allProducts.getTableHeader().setReorderingAllowed(false);
@@ -277,9 +278,10 @@ public class Sale extends javax.swing.JPanel {
         });
 
         DefaultTableModel model = (DefaultTableModel) allProducts.getModel();
-        for (Product p : stock.getProducts()) {
-            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), "Add"});
-        }
+        ImageIcon icn = new ImageIcon(getClass().getResource("/images/icon_add.png"));
+        stock.getProducts().forEach((p) -> {
+            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), icn});
+        });
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
@@ -322,12 +324,12 @@ public class Sale extends javax.swing.JPanel {
         });
 
         allProducts.setRowSorter(rowSorter);
-        
+
         allProducts.getColumnModel().getColumn(3).setCellRenderer(new ItemAlert());
 
     }
 
-    public class ItemAlert extends JLabel implements TableCellRenderer {
+    private class ItemAlert extends JLabel implements TableCellRenderer {
 
         public ItemAlert() {
             setOpaque(true);
@@ -340,19 +342,19 @@ public class Sale extends javax.swing.JPanel {
                 int row, int column) {
 
             if (Integer.valueOf(table.getValueAt(row, column).toString()) == 0) {
-                setBackground(new Color(255,180,191));
-                
+                setBackground(new Color(255, 180, 191));
+
             } else if (Integer.valueOf(table.getValueAt(row, column).toString()) < 5) {
-                setBackground(new Color(253,253,150));
-                
+                setBackground(new Color(253, 253, 150));
+
             } else {
-                setBackground(new Color(255,255,255));
-                
+                setBackground(new Color(255, 255, 255));
+
             }
-            
+
             setText(table.getValueAt(row, column).toString());
             setFont(new java.awt.Font("Comfortaa", 0, 18));
-            setForeground(new Color(66,66,66));
+            setForeground(new Color(66, 66, 66));
             setHorizontalAlignment(JLabel.RIGHT);
 
             return this;

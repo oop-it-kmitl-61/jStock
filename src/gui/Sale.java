@@ -5,7 +5,6 @@
  */
 package gui;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -15,9 +14,13 @@ import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.RowFilter;
+import javax.swing.event.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 import util.Product;
 import util.ProductSale;
 import util.ProductsSale;
@@ -30,6 +33,7 @@ import util.User;
  * @author Passawit
  */
 public class Sale extends javax.swing.JPanel {
+
     private Stock stock = new Stock();
     private User user = new User();
     private JPanel window;
@@ -40,7 +44,7 @@ public class Sale extends javax.swing.JPanel {
      */
     public Sale(JPanel window) {
         this.window = window;
-        
+
         initComponents();
         custom();
     }
@@ -79,6 +83,11 @@ public class Sale extends javax.swing.JPanel {
         tfSearch.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tfSearchMouseClicked(evt);
+            }
+        });
+        tfSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfSearchKeyPressed(evt);
             }
         });
 
@@ -206,7 +215,6 @@ public class Sale extends javax.swing.JPanel {
     private void tfSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfSearchMouseClicked
         // TODO add your handling code here:
         tfSearch.selectAll();
-        tfSearch.setForeground(new java.awt.Color(66, 66, 66));
     }//GEN-LAST:event_tfSearchMouseClicked
 
     private void bnSaleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnSaleMouseClicked
@@ -221,7 +229,7 @@ public class Sale extends javax.swing.JPanel {
             window.repaint();
             window.revalidate();
         }
-        
+
     }//GEN-LAST:event_bnSaleMouseClicked
 
     private void bnRefreshMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnRefreshMouseClicked
@@ -235,14 +243,19 @@ public class Sale extends javax.swing.JPanel {
         window.revalidate();
     }//GEN-LAST:event_bnRefreshMouseClicked
 
+    private void tfSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfSearchKeyPressed
+        // TODO add your handling code here:
+        tfSearch.setForeground(new java.awt.Color(66, 66, 66));
+    }//GEN-LAST:event_tfSearchKeyPressed
+
     private void custom() {
-        
+
         JTableHeader productsHeader = allProducts.getTableHeader();
         productsHeader.setFont(new java.awt.Font("Comfortaa", 0, 18));
         ((DefaultTableCellRenderer) productsHeader.getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
         productsHeader.setForeground(new java.awt.Color(66, 66, 66));
         productsHeader.setPreferredSize(new Dimension(375, 30));
-        
+
         allProducts.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 JTable target = (JTable) e.getSource();
@@ -250,11 +263,11 @@ public class Sale extends javax.swing.JPanel {
                 int column = target.getSelectedColumn();
                 System.out.println(row + ", " + column);
                 System.out.println((String) allProducts.getValueAt(row, 0));
-                
+
                 if (column == 4) {
                     ProductSale p = new ProductSale(allProducts.getValueAt(row, 0).toString(), 1);
                     ps.addProduct(p);
-                    bnSale.setBackground(new java.awt.Color(168,80,204));
+                    bnSale.setBackground(new java.awt.Color(168, 80, 204));
                 }
             }
         });
@@ -263,14 +276,50 @@ public class Sale extends javax.swing.JPanel {
         for (Product p : stock.getProducts()) {
             model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), "Add"});
         }
-        
+
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
         Date time = new Date();
         lbDateTime.setText("[" + dateFormat.format(date) + "] " + timeFormat.format(time));
+        
+        TableRowSorter<TableModel> rowSorter = new TableRowSorter<>(allProducts.getModel());
+        String text = tfSearch.getText();
 
+        tfSearch.getDocument().addDocumentListener(new DocumentListener(){
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                String text = tfSearch.getText();
+
+                if (text.trim().length() == 0) {
+                    rowSorter.setRowFilter(null);
+                } else {
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                }
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                String text = tfSearch.getText();
+
+                if (text.trim().length() == 0) {
+                    rowSorter.setRowFilter(null);
+                } else {
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                }
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+        });
+        
+        allProducts.setRowSorter(rowSorter);
     }
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,19 +5,15 @@
  */
 package gui;
 
-import java.awt.Dimension;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.swing.table.*;
+
 import util.Product;
 import util.Stock;
 
@@ -71,6 +67,11 @@ public class Edit extends javax.swing.JPanel {
         tfSearch.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tfSearchMouseClicked(evt);
+            }
+        });
+        tfSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfSearchKeyPressed(evt);
             }
         });
 
@@ -202,12 +203,6 @@ public class Edit extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfSearchMouseClicked
-        // TODO add your handling code here:
-        tfSearch.selectAll();
-        tfSearch.setForeground(new java.awt.Color(66, 66, 66));
-    }//GEN-LAST:event_tfSearchMouseClicked
-
     private void bnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnAddMouseClicked
         // TODO add your handling code here:
         window.removeAll();
@@ -229,6 +224,17 @@ public class Edit extends javax.swing.JPanel {
         window.repaint();
         window.revalidate();
     }//GEN-LAST:event_bnRefreshMouseClicked
+
+    private void tfSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfSearchMouseClicked
+        // TODO add your handling code here:
+        tfSearch.selectAll();
+        
+    }//GEN-LAST:event_tfSearchMouseClicked
+
+    private void tfSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfSearchKeyPressed
+        // TODO add your handling code here:
+        tfSearch.setForeground(new java.awt.Color(66, 66, 66));
+    }//GEN-LAST:event_tfSearchKeyPressed
 
     private void custom() {
         JTableHeader productsHeader = allProducts.getTableHeader();
@@ -268,6 +274,42 @@ public class Edit extends javax.swing.JPanel {
         DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
         Date time = new Date();
         lbDateTime.setText("[" + dateFormat.format(date) + "] " + timeFormat.format(time));
+        
+        TableRowSorter<TableModel> rowSorter = new TableRowSorter<>(allProducts.getModel());
+        String text = tfSearch.getText();
+
+        tfSearch.getDocument().addDocumentListener(new DocumentListener(){
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                String text = tfSearch.getText();
+
+                if (text.trim().length() == 0) {
+                    rowSorter.setRowFilter(null);
+                } else {
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                }
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                String text = tfSearch.getText();
+
+                if (text.trim().length() == 0) {
+                    rowSorter.setRowFilter(null);
+                } else {
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                }
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+        });
+        
+        allProducts.setRowSorter(rowSorter);
 
     }
 

@@ -58,6 +58,7 @@
  1. Clone this repository.
  
 `git clone https://github.com/oop-it-kmitl-61/jStock.git`
+
  2. Run project.
  - Without config (mongod must run on `localhost:27017`).
  

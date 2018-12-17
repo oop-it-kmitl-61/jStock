@@ -84,14 +84,14 @@ public class Edit extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Product ID", "Name", "Price", "Amount", "Edit"
+                "Product ID", "Name", "Brand", "Type", "Price", "Amount", "Edit"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -105,16 +105,10 @@ public class Edit extends javax.swing.JPanel {
         allProducts.setGridColor(new java.awt.Color(189, 189, 189));
         allProducts.setIntercellSpacing(new java.awt.Dimension(5, 5));
         allProducts.setRowHeight(40);
-        allProducts.setSelectionBackground(new java.awt.Color(237, 108, 112));
+        allProducts.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        allProducts.setSelectionForeground(new java.awt.Color(66, 66, 66));
         allProducts.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(allProducts);
-        if (allProducts.getColumnModel().getColumnCount() > 0) {
-            allProducts.getColumnModel().getColumn(0).setResizable(false);
-            allProducts.getColumnModel().getColumn(1).setResizable(false);
-            allProducts.getColumnModel().getColumn(2).setResizable(false);
-            allProducts.getColumnModel().getColumn(3).setResizable(false);
-            allProducts.getColumnModel().getColumn(4).setResizable(false);
-        }
 
         bnAdd.setBackground(new java.awt.Color(168, 80, 204));
         bnAdd.setMaximumSize(new java.awt.Dimension(170, 60));
@@ -243,17 +237,14 @@ public class Edit extends javax.swing.JPanel {
         productsHeader.setForeground(new java.awt.Color(66, 66, 66));
         productsHeader.setPreferredSize(new Dimension(375, 30));
         
-        ImageIcon icon = new ImageIcon("image.gif");
 
         allProducts.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 JTable target = (JTable) e.getSource();
                 int row = target.getSelectedRow();
                 int column = target.getSelectedColumn();
-                System.out.println(row + ", " + column);
-                System.out.println((String) allProducts.getValueAt(row, 0));
                 
-                if (column == 4) {
+                if (column == 6) {
                     window.removeAll();
                     window.repaint();
                     window.revalidate();
@@ -269,7 +260,7 @@ public class Edit extends javax.swing.JPanel {
         ImageIcon icn = new ImageIcon(getClass().getResource("/images/icon_editItem.png"));
         for (Product p : stock.getProducts()) {
 
-            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), icn});
+            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductBrand(), p.getProductType(), p.getProductPrice(), p.getProductAmount(), icn});
         }
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -314,7 +305,7 @@ public class Edit extends javax.swing.JPanel {
         
         allProducts.setRowSorter(rowSorter);
         
-        allProducts.getColumnModel().getColumn(3).setCellRenderer(new ItemAlert());
+        allProducts.getColumnModel().getColumn(5).setCellRenderer(new ItemAlert());
 
     }
     

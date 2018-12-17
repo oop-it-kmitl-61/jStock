@@ -17,6 +17,8 @@ public class ProductSale {
     private int productAmount;
     private int quantity;
     private double amount;
+    private String productBrand;
+    private String productType;
     
     public ProductSale(String productID, int quantity) {
         this.productID = productID;
@@ -24,6 +26,16 @@ public class ProductSale {
         this.productPrice = stock.getProduct(productID).getProductPrice();
         this.productAmount = stock.getProduct(productID).getProductAmount();
         this.quantity = quantity;
+        this.productBrand = stock.getProduct(productID).getProductBrand();
+        this.productType = stock.getProduct(productID).getProductType();
+    }
+
+    public String getProductBrand() {
+        return productBrand;
+    }
+
+    public String getProductType() {
+        return productType;
     }
 
     public String getProductID() {

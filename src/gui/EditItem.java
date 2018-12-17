@@ -49,6 +49,10 @@ public class EditItem extends javax.swing.JPanel {
         tfPrice = new javax.swing.JFormattedTextField();
         lbAmount = new javax.swing.JLabel();
         tfAmount = new javax.swing.JFormattedTextField();
+        lbBrand = new javax.swing.JLabel();
+        tfBrand = new javax.swing.JTextField();
+        lbType = new javax.swing.JLabel();
+        tfType = new javax.swing.JTextField();
         bnEdit = new javax.swing.JPanel();
         lbEdit = new javax.swing.JLabel();
         bnCancel = new javax.swing.JPanel();
@@ -58,8 +62,9 @@ public class EditItem extends javax.swing.JPanel {
         errMsg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(1194, 768));
+        setPreferredSize(new java.awt.Dimension(986, 768));
         setSize(new java.awt.Dimension(986, 768));
-        setLayout(null);
 
         pTop.setBackground(new java.awt.Color(168, 80, 204));
 
@@ -91,42 +96,47 @@ public class EditItem extends javax.swing.JPanel {
                     .addComponent(lbProductID)))
         );
 
-        add(pTop);
-        pTop.setBounds(0, 40, 986, 110);
-
-        lbName.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbName.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbName.setText("Product name");
-        add(lbName);
-        lbName.setBounds(56, 204, 236, 40);
 
-        tfName.setFont(new java.awt.Font("Comfortaa", 0, 24)); // NOI18N
+        tfName.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
         tfName.setActionCommand("<Not Set>");
         tfName.setAlignmentX(0.0F);
         tfName.setAlignmentY(0.0F);
         tfName.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfName.setMixingCutoutShape(null);
-        add(tfName);
-        tfName.setBounds(56, 250, 869, 50);
 
-        lbPrice.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbPrice.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbPrice.setText("Price");
-        add(lbPrice);
-        lbPrice.setBounds(56, 334, 84, 40);
 
         tfPrice.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
-        add(tfPrice);
-        tfPrice.setBounds(56, 380, 869, 50);
 
-        lbAmount.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbAmount.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbAmount.setText("Amount");
-        add(lbAmount);
-        lbAmount.setBounds(56, 464, 124, 40);
 
         tfAmount.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfAmount.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        add(tfAmount);
-        tfAmount.setBounds(56, 510, 869, 50);
+
+        lbBrand.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
+        lbBrand.setText("Brand (optional)");
+
+        tfBrand.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
+        tfBrand.setActionCommand("<Not Set>");
+        tfBrand.setAlignmentX(0.0F);
+        tfBrand.setAlignmentY(0.0F);
+        tfBrand.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        tfBrand.setMixingCutoutShape(null);
+
+        lbType.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
+        lbType.setText("Type (optional)");
+
+        tfType.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
+        tfType.setActionCommand("<Not Set>");
+        tfType.setAlignmentX(0.0F);
+        tfType.setAlignmentY(0.0F);
+        tfType.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        tfType.setMixingCutoutShape(null);
 
         bnEdit.setBackground(new java.awt.Color(168, 80, 204));
         bnEdit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(168, 80, 204), 3));
@@ -151,9 +161,6 @@ public class EditItem extends javax.swing.JPanel {
             bnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        add(bnEdit);
-        bnEdit.setBounds(390, 620, 170, 60);
 
         bnCancel.setBackground(new java.awt.Color(255, 255, 255));
         bnCancel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 83, 97), 3));
@@ -183,9 +190,6 @@ public class EditItem extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        add(bnCancel);
-        bnCancel.setBounds(60, 620, 170, 60);
-
         bnDelete.setBackground(new java.awt.Color(229, 83, 97));
         bnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 83, 97), 3));
         bnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -210,16 +214,77 @@ public class EditItem extends javax.swing.JPanel {
             .addComponent(lbDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        add(bnDelete);
-        bnDelete.setBounds(750, 620, 170, 60);
-
         errMsg.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
         errMsg.setForeground(new java.awt.Color(224, 70, 84));
         errMsg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         errMsg.setText(" ");
         errMsg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        add(errMsg);
-        errMsg.setBounds(56, 177, 869, 21);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbType)
+                            .addComponent(lbBrand)
+                            .addComponent(lbAmount)
+                            .addComponent(lbPrice)
+                            .addComponent(lbName)
+                            .addComponent(errMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(tfName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfPrice, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfAmount, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfBrand, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfType, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(bnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(160, 160, 160)
+                                    .addComponent(bnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(190, 190, 190)
+                                    .addComponent(bnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(pTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(errMsg)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbType, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfType, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void custom() {
@@ -227,6 +292,8 @@ public class EditItem extends javax.swing.JPanel {
         tfName.setText(thisProduct.getProductName());
         tfPrice.setText(thisProduct.getProductPrice()+"");
         tfAmount.setText(thisProduct.getProductAmount()+"");
+        tfBrand.setText(thisProduct.getProductBrand()+"");
+        tfType.setText(thisProduct.getProductType()+"");
     }
     
     private void bnEditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnEditMouseClicked
@@ -234,6 +301,8 @@ public class EditItem extends javax.swing.JPanel {
         String name = tfName.getText();
         String price = tfPrice.getText();
         String amount = tfAmount.getText();
+        String brand = tfBrand.getText();
+        String type = tfType.getText();
 
         if (name.equals("")) {
             errMsg.setText("name can't be empty!");
@@ -247,7 +316,7 @@ public class EditItem extends javax.swing.JPanel {
             cai.setVisible(true);
 
             if (cai.getReturnStatus()) {
-                stock.editProduct(productID, name, Double.parseDouble(price), Integer.parseInt(amount));
+                stock.editProduct(productID, name, Double.parseDouble(price), Integer.parseInt(amount), brand, type);
 
                 window.removeAll();
                 window.repaint();
@@ -301,6 +370,7 @@ public class EditItem extends javax.swing.JPanel {
     private javax.swing.JPanel bnEdit;
     private javax.swing.JLabel errMsg;
     private javax.swing.JLabel lbAmount;
+    private javax.swing.JLabel lbBrand;
     private javax.swing.JLabel lbCancel;
     private javax.swing.JLabel lbDelete;
     private javax.swing.JLabel lbEdit;
@@ -308,9 +378,12 @@ public class EditItem extends javax.swing.JPanel {
     private javax.swing.JLabel lbPrice;
     private javax.swing.JLabel lbProductID;
     private javax.swing.JLabel lbTop;
+    private javax.swing.JLabel lbType;
     private javax.swing.JPanel pTop;
     private javax.swing.JFormattedTextField tfAmount;
+    private javax.swing.JTextField tfBrand;
     private javax.swing.JTextField tfName;
     private javax.swing.JFormattedTextField tfPrice;
+    private javax.swing.JTextField tfType;
     // End of variables declaration//GEN-END:variables
 }

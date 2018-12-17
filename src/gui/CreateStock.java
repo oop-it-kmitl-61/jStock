@@ -57,7 +57,6 @@ public class CreateStock extends javax.swing.JPanel {
         bg.setMaximumSize(new java.awt.Dimension(1366, 768));
         bg.setMinimumSize(new java.awt.Dimension(1366, 768));
         bg.setPreferredSize(new java.awt.Dimension(1366, 768));
-        bg.setSize(new java.awt.Dimension(1366, 768));
 
         sideBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cbg.png"))); // NOI18N
         sideBg.setAlignmentY(0.0F);

@@ -45,6 +45,10 @@ public class AddItem extends javax.swing.JPanel {
         tfPrice = new javax.swing.JFormattedTextField();
         lbAmount = new javax.swing.JLabel();
         tfAmount = new javax.swing.JFormattedTextField();
+        lbBrand = new javax.swing.JLabel();
+        tfBrand = new javax.swing.JTextField();
+        lbType = new javax.swing.JLabel();
+        tfType = new javax.swing.JTextField();
         bnAdd = new javax.swing.JPanel();
         lbAdd = new javax.swing.JLabel();
         bnCancel = new javax.swing.JPanel();
@@ -78,27 +82,47 @@ public class AddItem extends javax.swing.JPanel {
                 .addComponent(lbTop))
         );
 
-        lbName.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbName.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbName.setText("Product name");
 
-        tfName.setFont(new java.awt.Font("Comfortaa", 0, 24)); // NOI18N
+        tfName.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
         tfName.setActionCommand("<Not Set>");
         tfName.setAlignmentX(0.0F);
         tfName.setAlignmentY(0.0F);
         tfName.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfName.setMixingCutoutShape(null);
 
-        lbPrice.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbPrice.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbPrice.setText("Price");
 
         tfPrice.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
-        lbAmount.setFont(new java.awt.Font("COCOGOOSE ", 0, 30)); // NOI18N
+        lbAmount.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
         lbAmount.setText("Amount");
 
         tfAmount.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         tfAmount.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+
+        lbBrand.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
+        lbBrand.setText("Brand (optional)");
+
+        tfBrand.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
+        tfBrand.setActionCommand("<Not Set>");
+        tfBrand.setAlignmentX(0.0F);
+        tfBrand.setAlignmentY(0.0F);
+        tfBrand.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        tfBrand.setMixingCutoutShape(null);
+
+        lbType.setFont(new java.awt.Font("COCOGOOSE ", 0, 24)); // NOI18N
+        lbType.setText("Type (optional)");
+
+        tfType.setFont(new java.awt.Font("Comfortaa", 0, 18)); // NOI18N
+        tfType.setActionCommand("<Not Set>");
+        tfType.setAlignmentX(0.0F);
+        tfType.setAlignmentY(0.0F);
+        tfType.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 189, 189), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        tfType.setMixingCutoutShape(null);
 
         bnAdd.setBackground(new java.awt.Color(229, 83, 97));
         bnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 83, 97), 3));
@@ -117,11 +141,13 @@ public class AddItem extends javax.swing.JPanel {
         bnAdd.setLayout(bnAddLayout);
         bnAddLayout.setHorizontalGroup(
             bnAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(lbAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         bnAddLayout.setVerticalGroup(
             bnAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bnAddLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         bnCancel.setBackground(new java.awt.Color(255, 255, 255));
@@ -166,6 +192,8 @@ public class AddItem extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbType)
+                    .addComponent(lbBrand)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 529, Short.MAX_VALUE)
@@ -176,7 +204,9 @@ public class AddItem extends javax.swing.JPanel {
                     .addComponent(lbAmount)
                     .addComponent(lbPrice)
                     .addComponent(lbName)
-                    .addComponent(errMsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(errMsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfBrand)
+                    .addComponent(tfType))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -184,28 +214,34 @@ public class AddItem extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(pTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(errMsg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(lbPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(lbAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(errMsg)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(143, 143, 143))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(lbName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbType, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfType, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -214,6 +250,8 @@ public class AddItem extends javax.swing.JPanel {
         String name = tfName.getText();
         String price = tfPrice.getText();
         String amount = tfAmount.getText();
+        String brand = tfBrand.getText();
+        String type = tfType.getText();
 
         if (name.equals("")) {
             errMsg.setText("name can't be empty!");
@@ -227,7 +265,7 @@ public class AddItem extends javax.swing.JPanel {
             cai.setVisible(true);
 
             if (cai.getReturnStatus()) {
-                stock.addProduct(user.getProductID(), name, Double.parseDouble(price), Integer.parseInt(amount));
+                stock.addProduct(user.getProductID(), name, Double.parseDouble(price), Integer.parseInt(amount), brand, type);
                 
                 window.removeAll();
                 window.repaint();
@@ -259,13 +297,17 @@ public class AddItem extends javax.swing.JPanel {
     private javax.swing.JLabel errMsg;
     private javax.swing.JLabel lbAdd;
     private javax.swing.JLabel lbAmount;
+    private javax.swing.JLabel lbBrand;
     private javax.swing.JLabel lbCancel;
     private javax.swing.JLabel lbName;
     private javax.swing.JLabel lbPrice;
     private javax.swing.JLabel lbTop;
+    private javax.swing.JLabel lbType;
     private javax.swing.JPanel pTop;
     private javax.swing.JFormattedTextField tfAmount;
+    private javax.swing.JTextField tfBrand;
     private javax.swing.JTextField tfName;
     private javax.swing.JFormattedTextField tfPrice;
+    private javax.swing.JTextField tfType;
     // End of variables declaration//GEN-END:variables
 }

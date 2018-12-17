@@ -27,26 +27,32 @@ public class Stock {
             products.add(new Product((String) product.get("productID"),
                                      (String) product.get("productName"),
                                      (double) product.get("productPrice"),
-                                     (int) product.get("productAmount")));
+                                     (int) product.get("productAmount"),
+                                     (String) product.get("productBrand"),
+                                     (String) product.get("productType")));
         }
     }
 
-    public void addProduct(String productID, String productName, double productPrice, int productAmount) {
+    public void addProduct(String productID, String productName, double productPrice, int productAmount, String productBrand, String productType) {
         BasicDBObject newProduct = new BasicDBObject();
         newProduct.put("productID", productID);
         newProduct.put("productName", productName);
         newProduct.put("productPrice", productPrice);
         newProduct.put("productAmount", productAmount);
+        newProduct.put("productBrand", productBrand);
+        newProduct.put("productType", productType);
 
         stockColl.insert(newProduct);
     }
 
-    public void editProduct(String productID, String productName, double productPrice, int productAmount) {
+    public void editProduct(String productID, String productName, double productPrice, int productAmount, String productBrand, String productType) {
         BasicDBObject newProduct = new BasicDBObject();
         newProduct.put("productID", productID);
         newProduct.put("productName", productName);
         newProduct.put("productPrice", productPrice);
         newProduct.put("productAmount", productAmount);
+        newProduct.put("productBrand", productBrand);
+        newProduct.put("productType", productType);
 
         DBObject query = new BasicDBObject("productID", productID);
         DBCursor cursor = stockColl.find(query);
@@ -68,7 +74,9 @@ public class Stock {
         Product product = new Product((String) obj.get("productID"),
                                       (String) obj.get("productName"),
                                       (double) obj.get("productPrice"),
-                                      (int) obj.get("productAmount"));
+                                      (int) obj.get("productAmount"),
+                                      (String) obj.get("productBrand"),
+                                      (String) obj.get("productType"));
         
         return product;
     }

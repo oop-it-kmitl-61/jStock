@@ -104,14 +104,14 @@ public class Sale extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Product ID", "Name", "Price", "Amount", "Add"
+                "Product ID", "Name", "Brand", "Type", "Price", "Amount", "Add"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, ImageIcon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -266,10 +266,8 @@ public class Sale extends javax.swing.JPanel {
                 JTable target = (JTable) e.getSource();
                 int row = target.getSelectedRow();
                 int column = target.getSelectedColumn();
-                System.out.println(row + ", " + column);
-                System.out.println((String) allProducts.getValueAt(row, 0));
 
-                if (column == 4) {
+                if (column == 6) {
                     ProductSale p = new ProductSale(allProducts.getValueAt(row, 0).toString(), 1);
                     ps.addProduct(p);
                     bnSale.setBackground(new java.awt.Color(168, 80, 204));
@@ -280,7 +278,7 @@ public class Sale extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) allProducts.getModel();
         ImageIcon icn = new ImageIcon(getClass().getResource("/images/icon_add.png"));
         stock.getProducts().forEach((p) -> {
-            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductPrice(), p.getProductAmount(), icn});
+            model.addRow(new Object[]{p.getProductID(), p.getProductName(), p.getProductBrand(), p.getProductType(), p.getProductPrice(), p.getProductAmount(), icn});
         });
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -325,7 +323,7 @@ public class Sale extends javax.swing.JPanel {
 
         allProducts.setRowSorter(rowSorter);
 
-        allProducts.getColumnModel().getColumn(3).setCellRenderer(new ItemAlert());
+        allProducts.getColumnModel().getColumn(5).setCellRenderer(new ItemAlert());
 
     }
 

@@ -45,7 +45,7 @@ public class Transactions {
                 productsObj.add(productObj);
                 
                 int amount = product.getProductAmount() - product.getQuantity();
-                stock.editProduct(product.getProductID(), product.getProductName(), product.getProductPrice(), amount);
+                stock.editProduct(product.getProductID(), product.getProductName(), product.getProductPrice(), amount, product.getProductBrand(), product.getProductType());
             }
 
             BasicDBObject date = new BasicDBObject();

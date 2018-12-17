@@ -56,10 +56,13 @@
 
 ## 🏃 Running the project
  1. Clone this repository.
+ 
 `git clone https://github.com/oop-it-kmitl-61/jStock.git`
  2. Run project.
  - Without config (mongod must run on `localhost:27017`).
+ 
 `cd jStock`
+
 `java -jar jStock.jar`
 - With config. Run with java IDE such as [NetBeans](https://netbeans.org/), [Eclipse](https://www.eclipse.org/downloads/), [IntelliJ](https://www.jetbrains.com/idea/).
 

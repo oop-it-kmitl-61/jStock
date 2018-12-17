@@ -77,6 +77,7 @@
 ![sale1](https://user-images.githubusercontent.com/32861458/50114714-d0441f80-0277-11e9-8e7e-fe8ee1a10be6.png)
 
 *Now stock is empty, so you need to add product to stock by click at "Edit Stock" button, but this function is only for store owners or managers who have a password.*
+
 ![password](https://user-images.githubusercontent.com/32861458/50114967-a3dcd300-0278-11e9-8a77-8e2e55e5d729.png)
 
 *After you insert the correct password and click Continue the program will direct to edit page and then click Add Product to go to Add Product page.*

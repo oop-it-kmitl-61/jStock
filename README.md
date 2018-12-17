@@ -33,7 +33,8 @@
 				month: "12",
 				year: "2018"
 			},
-			time: "23:59:59", total: 2000,
+			time: "23:59:59",
+			total: 2000,
 			products: [{
 				productID: "00000",
 				productName: "submarine",

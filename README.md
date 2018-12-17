@@ -49,11 +49,11 @@
  2. [MongoDB](https://www.mongodb.com/download-center/community)
 
 ### ⚙️ Configuration (optional)
- - Database Host in this [file](config/Config.java). Replace YOUR_HOST to your host.
+ - Database Host in this [file](/src/config/Config.java). Replace YOUR_HOST to your host.
  
 `private final String HOST = "YOUR_HOST";`
 
- - Database Port in this [file](config/Config.java). Replace YOUR_PORT to your port.
+ - Database Port in this [file](/src/config/Config.java). Replace YOUR_PORT to your port.
  
 `private final int PORT = YOUR_PORT;`
 

@@ -84,7 +84,7 @@
 ![create stock](https://user-images.githubusercontent.com/32861458/50142150-eedc0200-02db-11e9-8b8f-9110c3ffed73.png)
 
 *Welcome page will append when stock created successful.*
-![welcome](https://user-images.githubusercontent.com/32861458/50142155-f13e5c00-02db-11e9-8434-d66a4473c4f1.png)
+![welcome](https://user-images.githubusercontent.com/32861458/50142236-2fd41680-02dc-11e9-946e-0f9af6bb1fd4.png)
 
 *For the next time the program will direct to sale page.*
 ![sale1](https://user-images.githubusercontent.com/32861458/50140973-e635fc80-02d8-11e9-97ac-c7c2988902e2.png)

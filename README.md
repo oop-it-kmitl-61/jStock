@@ -1,6 +1,7 @@
 
   
-# jStock
+![logo](https://user-images.githubusercontent.com/32861458/50169860-0be6f400-0321-11e9-87cb-474add549e96.png)
+---
 &nbsp;&nbsp;&nbsp; Inventory management system for all types of stores.
 With a variety of functions. Caring for a shop will be easier from now on. **jStock**, a java project for Object-Oriented Programming 2018, will help you to manage your both storefront and warehouse.
 

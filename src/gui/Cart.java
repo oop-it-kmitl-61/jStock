@@ -67,7 +67,7 @@ public class Cart extends javax.swing.JPanel {
 
         lbTop.setFont(new java.awt.Font("Paloseco", 1, 70)); // NOI18N
         lbTop.setForeground(new java.awt.Color(255, 255, 255));
-        lbTop.setText("Recipt");
+        lbTop.setText("Recipte");
 
         javax.swing.GroupLayout pTopLayout = new javax.swing.GroupLayout(pTop);
         pTop.setLayout(pTopLayout);

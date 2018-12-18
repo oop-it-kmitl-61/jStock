@@ -401,7 +401,7 @@ public class SidePanel extends javax.swing.JPanel {
         window.repaint();
         window.revalidate();
 
-        window.add(new DashboardDay());
+        window.add(new DashboardDay(window));
         window.repaint();
         window.revalidate();
     }//GEN-LAST:event_bnDashboardMouseClicked

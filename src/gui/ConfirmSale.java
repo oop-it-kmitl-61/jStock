@@ -89,7 +89,6 @@ public class ConfirmSale extends javax.swing.JDialog {
         setMaximumSize(new java.awt.Dimension(332, 326));
         setMinimumSize(new java.awt.Dimension(332, 326));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(332, 326));
         setResizable(false);
         setSize(new java.awt.Dimension(332, 326));
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -105,7 +104,7 @@ public class ConfirmSale extends javax.swing.JDialog {
         bg.setSize(new java.awt.Dimension(332, 214));
 
         description.setFont(new java.awt.Font("Comfortaa", 0, 24)); // NOI18N
-        description.setText("Recipt");
+        description.setText("Recipte");
 
         lbID.setFont(new java.awt.Font("PT Mono", 0, 24)); // NOI18N
         lbID.setText("#000000000");

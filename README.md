@@ -1,4 +1,5 @@
 
+  
 # jStock
 &nbsp;&nbsp;&nbsp; Caring for a shop will be easier from now on. **jStock**, a java project for Object-Oriented Programming 2018, will help you to manage your both storefront and warehouse.
 
@@ -84,60 +85,66 @@
 ![welcome](https://user-images.githubusercontent.com/32861458/50114630-94a95580-0277-11e9-90c3-e0743ca98863.png)
 
 *For the next time the program will direct to sale page.*
-![sale1](https://user-images.githubusercontent.com/32861458/50114714-d0441f80-0277-11e9-8e7e-fe8ee1a10be6.png)
+![sale1](https://user-images.githubusercontent.com/32861458/50140973-e635fc80-02d8-11e9-97ac-c7c2988902e2.png)
 
 *Now stock is empty, so you need to add product to stock by click at "Edit Stock" button, but this function is only for store owners or managers who have a password.*
 
 ![password](https://user-images.githubusercontent.com/32861458/50114967-a3dcd300-0278-11e9-8a77-8e2e55e5d729.png)
 
 *After you insert the correct password and click Continue the program will direct to edit page and then click Add Product to go to Add Product page.*
-![edit1](https://user-images.githubusercontent.com/32861458/50115041-d8508f00-0278-11e9-9c41-62996d91c731.png)
+![edit1](https://user-images.githubusercontent.com/32861458/50140974-e6ce9300-02d8-11e9-8be4-5138be382468.png)
 
 *You need to complete the product informations. Next step is click the Add Product button.*
-![add](https://user-images.githubusercontent.com/32861458/50115142-1ea5ee00-0279-11e9-8df5-a4f422ce3cd8.png)
+![add](https://user-images.githubusercontent.com/32861458/50140975-e6ce9300-02d8-11e9-9881-286655a19ef2.png)
 
 *After clicking the button the program will show this dialog to confirm to add product. You need to check the information is correctly and click Add button to add product to stock.*
 ![add check](https://user-images.githubusercontent.com/32861458/50115357-b1df2380-0279-11e9-9319-2e2194915db5.png)
 
 *After the previous step the program will back to edit page and you product has shown in table. If nothing happen you can click refresh button below the table to refresh data.*
-![edit2](https://user-images.githubusercontent.com/32861458/50115519-36ca3d00-027a-11e9-8a9a-9023fc1d4b76.png)
+![edit2](https://user-images.githubusercontent.com/32861458/50141519-47120480-02da-11e9-9392-a9bec95fc657.png)
 
 *This is example of alert. If product amount is less than 5 the cell will change colour to yellow. And if product is out the cell will change colour to red.*
-![edit3](https://user-images.githubusercontent.com/32861458/50115719-d5569e00-027a-11e9-839a-3ade198acc9a.png)
+![edit3](https://user-images.githubusercontent.com/32861458/50140976-e7672980-02d8-11e9-9278-8dcd87cea8bb.png)
 
 *You can also edit or delete product by clicking at the edit icon in Edit column.*
-![edit product](https://user-images.githubusercontent.com/32861458/50115920-5c0b7b00-027b-11e9-926b-b7e47e5e112c.png)
+![edit product](https://user-images.githubusercontent.com/32861458/50140977-e7672980-02d8-11e9-8af5-5886d73efc54.png)
 
 *If you want to delete the program will show this dialog to confirm.*
-![delete product confirm](https://user-images.githubusercontent.com/32861458/50116060-b0aef600-027b-11e9-881e-7d21ad4a9454.png)
+![delete product confirm](https://user-images.githubusercontent.com/32861458/50140978-e7672980-02d8-11e9-8490-c26ee644ac5f.png)
 
 *After you delete the product will disappear from the stock.*
-![edit4](https://user-images.githubusercontent.com/32861458/50116159-f966af00-027b-11e9-866a-07abe0037946.png)
+![edit4](https://user-images.githubusercontent.com/32861458/50141373-e71b5e00-02d9-11e9-9ea5-99de41f049cc.png)
 
 *The product that you add from Edit page is link to Sale page.*
-![sale2](https://user-images.githubusercontent.com/32861458/50116274-4c406680-027c-11e9-963c-89ff43da21c9.png)
+![sale2](https://user-images.githubusercontent.com/32861458/50140979-e7ffc000-02d8-11e9-90f8-53b21c599b70.png)
 
 *You can search product by typing the product's name even the product's ID in Search field.*
-![search1](https://user-images.githubusercontent.com/32861458/50116366-84e04000-027c-11e9-9efb-d18fc65a9ea6.png)
-![search2](https://user-images.githubusercontent.com/32861458/50116367-84e04000-027c-11e9-9343-b913a3ac3a48.png)
+![search1](https://user-images.githubusercontent.com/32861458/50141466-1fbb3780-02da-11e9-921c-9404d2027244.png)
+![search2](https://user-images.githubusercontent.com/32861458/50141467-1fbb3780-02da-11e9-82a6-fe20bcbb72df.png)
 
 *To sale the products you need to click the Add button of the product that you want to sale and then click Sale button to go to summary page.*
-![sold](https://user-images.githubusercontent.com/32861458/50130367-d950e300-02af-11e9-89bc-3169776a96b8.png)
+![sold](https://user-images.githubusercontent.com/32861458/50140980-e7ffc000-02d8-11e9-92cc-82fc10109936.png)
 
 *After clicking Sale button the program will show this dialog to confirm to sale.*
-![recipe](https://user-images.githubusercontent.com/32861458/50130368-d950e300-02af-11e9-884e-15409617011a.png)
+![recipe](https://user-images.githubusercontent.com/32861458/50141837-1c747b80-02db-11e9-8bb4-205c222f280b.png)
 
 *If products have not enough when you click sale the program will show this dialog and can't sale products.*
 ![out of stock](https://user-images.githubusercontent.com/32861458/50116884-12705f80-027e-11e9-99ff-1155b39d0d29.png)
 
+*You can see all of transactions by clicking at Transactions button the program will direct to transactions page.*
+![transaction page](https://user-images.githubusercontent.com/32861458/50140983-e9c98380-02d8-11e9-9694-c4e63e381810.png)
+
+*To view more detail of transaction you need to click at view button in View column the program will show this transaction's information dialog.*
+![view transaction](https://user-images.githubusercontent.com/32861458/50141835-1c747b80-02db-11e9-95e0-356ecb724168.png)
+
 *When you sale successful the program will back to Sale page and product amount has reduced.*
-![sale3](https://user-images.githubusercontent.com/32861458/50117028-68450780-027e-11e9-9598-b958abb5ac89.png)
+![sale3](https://user-images.githubusercontent.com/32861458/50140982-e9c98380-02d8-11e9-9559-da5b2e49061a.png)
 
 *To check profits you need to click Dashboard button the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
-![dashboard](https://user-images.githubusercontent.com/32861458/50130226-22ecfe00-02af-11e9-9764-e592cede6573.png)
+![dashboard](https://user-images.githubusercontent.com/32861458/50140987-ea621a00-02d8-11e9-9f4f-c6e6d8f0b229.png)
 
 *You can also change store name and password by click at Setting button (this function require password like Edit page).*
-![enter image description here](https://user-images.githubusercontent.com/32861458/50117173-ca057180-027e-11e9-9433-5cb89d9ca1e0.png)
+![enter image description here](https://user-images.githubusercontent.com/32861458/50140988-ea621a00-02d8-11e9-96df-b7c6db13dcab.png)
 
 *To quit the program you just click at the Quit button the program will show this dialog to confirm to quit.*
 ![quit](https://user-images.githubusercontent.com/32861458/50117307-32545300-027f-11e9-9642-9fdb20d0d4df.png)

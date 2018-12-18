@@ -155,7 +155,7 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 
 ## 👩‍💻  Author  👨‍💻
 |![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|
-|:-:|--|--|
+|:-:|:-:|:-:|
 |60070073|60070076|60070114|
 |Passawit|Mareena|Apisit|
 |Riewthong|Nuramun|Wetmaha|
@@ -163,7 +163,7 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 
 ## 👩‍🏫 Supervisor
 |![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|
-|--|
+|:-:|
 |Asst.prof. Thanisa Numnonda, Ph.D.|
 
 ---

@@ -1,12 +1,13 @@
 
   
 # jStock
-&nbsp;&nbsp;&nbsp; Caring for a shop will be easier from now on. **jStock**, a java project for Object-Oriented Programming 2018, will help you to manage your both storefront and warehouse.
+&nbsp;&nbsp;&nbsp; Inventory management system for all types of stores.
+With a variety of functions. Caring for a shop will be easier from now on. **jStock**, a java project for Object-Oriented Programming 2018, will help you to manage your both storefront and warehouse.
 
 ### ✏️ Functional Specification
  - Sale products.
- - Add/Edit product (This function is only for store owners or managers).
- - Transactions.
+ - Add/Edit product (only for store owners or managers).
+ - Transactions record.
  - Sales Analysis.
 
 ### 🗄 Database structure
@@ -68,7 +69,7 @@
 `git clone https://github.com/oop-it-kmitl-61/jStock.git`
 
  2. Run project.
- - Without config (mongod must run on `localhost:27017`).
+ - Without config (mongodb must run on `localhost:27017`).
  
 `cd jStock`
 
@@ -83,10 +84,10 @@
 *For the first time you need to create new stock.*
 ![create stock](https://user-images.githubusercontent.com/32861458/50142150-eedc0200-02db-11e9-8b8f-9110c3ffed73.png)
 
-*Welcome page will append when stock created successful.*
+*Welcome page will show up when stock created successful.*
 ![welcome](https://user-images.githubusercontent.com/32861458/50142236-2fd41680-02dc-11e9-946e-0f9af6bb1fd4.png)
 
-*For the next time the program will direct to sale page.*
+*For the next time of use, the program will direct to sale page.*
 ![sale1](https://user-images.githubusercontent.com/32861458/50140973-e635fc80-02d8-11e9-97ac-c7c2988902e2.png)
 
 *Now stock is empty, so you need to add product to stock by click at "Edit Stock" button, but this function is only for store owners or managers who have a password.*
@@ -99,22 +100,22 @@
 *You need to complete the product informations. Next step is click the Add Product button.*
 ![add](https://user-images.githubusercontent.com/32861458/50140975-e6ce9300-02d8-11e9-9881-286655a19ef2.png)
 
-*After clicking the button the program will show this dialog to confirm to add product. You need to check the information is correctly and click Add button to add product to stock.*
+*After clicking the button, the program will show this dialog to confirm adding product. You need to check if the information is correctly and click Add button to add product to stock.*
 ![add check](https://user-images.githubusercontent.com/32861458/50115357-b1df2380-0279-11e9-9319-2e2194915db5.png)
 
-*After the previous step the program will back to edit page and you product has shown in table. If nothing happen you can click refresh button below the table to refresh data.*
+*After the previous step the program will back to edit page and your product will be shown in table. If nothing happen, you can click refresh button below the table to refresh data.*
 ![edit2](https://user-images.githubusercontent.com/32861458/50141519-47120480-02da-11e9-9392-a9bec95fc657.png)
 
-*This is example of alert. If product amount is less than 5 the cell will change colour to yellow. And if product is out the cell will change colour to red.*
+*This is example of alert. If product amount is less than 5, the cell will change colour to yellow. And if product is out, the cell will change colour to red.*
 ![edit3](https://user-images.githubusercontent.com/32861458/50140976-e7672980-02d8-11e9-9278-8dcd87cea8bb.png)
 
 *You can also edit or delete product by clicking at the edit icon in Edit column.*
 ![edit product](https://user-images.githubusercontent.com/32861458/50140977-e7672980-02d8-11e9-8af5-5886d73efc54.png)
 
-*If you want to delete the program will show this dialog to confirm.*
+*If you want to delete a product, the program will show this dialog to confirm.*
 ![delete product confirm](https://user-images.githubusercontent.com/32861458/50140978-e7672980-02d8-11e9-8490-c26ee644ac5f.png)
 
-*After you delete the product will disappear from the stock.*
+*After you confirm the deletion, the product will disappear from the stock.*
 ![edit4](https://user-images.githubusercontent.com/32861458/50141373-e71b5e00-02d9-11e9-9ea5-99de41f049cc.png)
 
 *The product that you add from Edit page is link to Sale page.*
@@ -130,20 +131,20 @@
 *After clicking Sale button the program will show this dialog to confirm to sale.*
 ![recipe](https://user-images.githubusercontent.com/32861458/50141837-1c747b80-02db-11e9-8bb4-205c222f280b.png)
 
-*If products have not enough when you click sale the program will show this dialog and can't sale products.*
+*If there are not enough product, the program will show this dialog and can't sale products when you click sale.*
 ![out of stock](https://user-images.githubusercontent.com/32861458/50116884-12705f80-027e-11e9-99ff-1155b39d0d29.png)
 
-*When you sale successful the program will back to Sale page and product amount has reduced.*
+*When you successfully selling, the program will back to Sale page and product amount will be reduced.*
 ![sale3](https://user-images.githubusercontent.com/32861458/50140982-e9c98380-02d8-11e9-9559-da5b2e49061a.png)
 
-*You can see all of transactions by clicking at Transactions button the program will direct to transactions page.*
+*You can see all of transactions by clicking at Transactions button then the program will direct to transactions page.*
 ![transaction page](https://user-images.githubusercontent.com/32861458/50140983-e9c98380-02d8-11e9-9694-c4e63e381810.png)
 
 *To view more detail of transaction you need to click at view button in View column the program will show this transaction's information dialog.*
 
 ![view transaction](https://user-images.githubusercontent.com/32861458/50141835-1c747b80-02db-11e9-95e0-356ecb724168.png)
 
-*To check profits you need to click Dashboard button the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
+*To check profits you need to click Dashboard button, the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
 ![dashboard](https://user-images.githubusercontent.com/32861458/50140987-ea621a00-02d8-11e9-9f4f-c6e6d8f0b229.png)
 
 *You can also change store name and password by click at Setting button (this function require password like Edit page).*

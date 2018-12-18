@@ -154,11 +154,12 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 ![quit](https://user-images.githubusercontent.com/32861458/50117307-32545300-027f-11e9-9642-9fdb20d0d4df.png)
 
 ## 👩‍💻  Author  👨‍💻
-|  |StudentID|Name|Surname|GitHub|
-|:-:|--|--|--|--|
-|![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|60070073|Passawit|Riewthong|[@dekdew](https://github.com/dekdew)|
-|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|60070076|Mareena|Nuramun|[@skefolksy](https://github.com/skefolksy)|
-|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|60070114|Apisit|Wetmaha|[@Apisit60070114](https://github.com/Apisit60070114)|
+|![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|
+|:-:|--|--|
+|60070073|60070076|60070114|
+|Passawit|Passawit|Apisit|
+|Riewthong|Nuramun|Wetmaha|
+|[@dekdew](https://github.com/dekdew)|[@skefolksy](https://github.com/skefolksy)|[@Apisit60070114](https://github.com/Apisit60070114)|
 
 ## 👩‍🏫 Supervisor
 |![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|Asst.prof. Thanisa Numnonda, Ph.D.|

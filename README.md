@@ -121,10 +121,10 @@
 ![search2](https://user-images.githubusercontent.com/32861458/50116367-84e04000-027c-11e9-9343-b913a3ac3a48.png)
 
 *To sale the products you need to click the Add button of the product that you want to sale and then click Sale button to go to summary page.*
-![sold](https://user-images.githubusercontent.com/32861458/50116503-f61ff300-027c-11e9-950b-1fec53a3703b.png)
+![sold](https://user-images.githubusercontent.com/32861458/50130367-d950e300-02af-11e9-89bc-3169776a96b8.png)
 
 *After clicking Sale button the program will show this dialog to confirm to sale.*
-![recipe](https://user-images.githubusercontent.com/32861458/50116504-f6b88980-027c-11e9-85ae-2ded1929b919.png)
+![recipe](https://user-images.githubusercontent.com/32861458/50130368-d950e300-02af-11e9-884e-15409617011a.png)
 
 *If products have not enough when you click sale the program will show this dialog and can't sale products.*
 ![out of stock](https://user-images.githubusercontent.com/32861458/50116884-12705f80-027e-11e9-99ff-1155b39d0d29.png)

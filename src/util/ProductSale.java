@@ -61,5 +61,9 @@ public class ProductSale {
     public double getAmount() {
         return quantity * productPrice;
     }
+    
+    public void addQuantity() {
+        this.quantity++;
+    }
 
 }

@@ -186,7 +186,7 @@ public class Cart extends javax.swing.JPanel {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -255,7 +255,6 @@ public class Cart extends javax.swing.JPanel {
 
         String total = Double.toString(t.getTotal());
         lbTotal.setText(total);
-        System.out.print(t.getTotal());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -13,9 +13,24 @@ import java.util.ArrayList;
  */
 public class ProductsSale {
     private ArrayList<ProductSale> products = new ArrayList<>();
+    private boolean flag = true;
     
     public void addProduct(ProductSale product) {
-        products.add(product);
+        
+        try {
+            for (int i=0; i<products.size(); i++) {
+                if (product.getProductID().equals(products.get(i).getProductID())) {
+                    products.get(i).addQuantity();
+                    flag = false;
+                }
+            }
+        } catch (Exception e) {
+        }
+        
+        if (flag) {
+            products.add(product);
+        }
+        
     }
     
     public ArrayList<ProductSale> getProducts() {

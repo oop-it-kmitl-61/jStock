@@ -14,7 +14,7 @@ import javax.swing.table.JTableHeader;
 import util.ProductSale;
 import util.ProductsSale;
 import util.Transaction;
-import util.Transactions;
+import util.TransactionsUtil;
 
 /**
  *
@@ -215,7 +215,7 @@ public class Cart extends javax.swing.JPanel {
         cai.setVisible(true);
 
         if (cai.getReturnStatus()) {
-            if (new Transactions().sale(t)) {
+            if (new TransactionsUtil().sale(t)) {
                 window.removeAll();
                 window.repaint();
                 window.revalidate();

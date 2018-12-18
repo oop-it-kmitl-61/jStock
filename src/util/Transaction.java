@@ -5,6 +5,7 @@
  */
 package util;
 
+import com.mongodb.BasicDBObject;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,6 +23,17 @@ public class Transaction {
     private String time;
     private double total;
     private ArrayList<ProductSale> products;
+    private ArrayList<BasicDBObject> productsObj;
+
+    public Transaction(String transactionID, String day, String month, String year, String time, double total, ArrayList<BasicDBObject> productsObj) {
+        this.transactionID = transactionID;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.time = time;
+        this.total = total;
+        this.productsObj = productsObj;
+    }
 
     public Transaction(String transactionID, ProductsSale products) {
         this.transactionID = transactionID;
@@ -68,6 +80,10 @@ public class Transaction {
 
     public ArrayList<ProductSale> getProducts() {
         return products;
+    }
+    
+    public ArrayList<BasicDBObject> getProductsObj() {
+        return productsObj;
     }
     
 }

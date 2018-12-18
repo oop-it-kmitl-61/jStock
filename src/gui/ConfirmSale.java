@@ -5,8 +5,10 @@
  */
 package gui;
 
+import com.mongodb.BasicDBObject;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
@@ -23,6 +25,7 @@ import util.Transaction;
  * @author Passawit
  */
 public class ConfirmSale extends javax.swing.JDialog {
+
     private Transaction t;
 
     /**
@@ -36,11 +39,12 @@ public class ConfirmSale extends javax.swing.JDialog {
 
     /**
      * Creates new form Quit
+     *
      * @param t
      */
     public ConfirmSale(Transaction t) {
         this.t = t;
-        
+
         initComponents();
         custom();
 
@@ -262,28 +266,28 @@ public class ConfirmSale extends javax.swing.JDialog {
     private void closeDialog(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_closeDialog
         doClose(RET_CANCEL);
     }//GEN-LAST:event_closeDialog
-    
+
     private void doClose(boolean retStatus) {
         returnStatus = retStatus;
         setVisible(false);
         dispose();
     }
-    
+
     private void custom() {
         JTableHeader productsHeader = allProducts.getTableHeader();
         productsHeader.setFont(new java.awt.Font("Comfortaa", 0, 12));
         ((DefaultTableCellRenderer) productsHeader.getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
         productsHeader.setForeground(new java.awt.Color(66, 66, 66));
-        
+
         DefaultTableModel model = (DefaultTableModel) allProducts.getModel();
         t.getProducts().forEach((p) -> {
             model.addRow(new Object[]{p.getQuantity(), p.getProductName(), p.getProductPrice(), p.getAmount()});
         });
-        
+
         lbID.setText("#" + t.getTransactionID());
         lbDate.setText(t.getDay() + "/" + t.getMonth() + "/" + t.getYear());
         lbTime.setText(t.getTime());
-        lbTotal.setText(t.getTotal()+"");
+        lbTotal.setText(t.getTotal() + "");
     }
 
     public void init() {

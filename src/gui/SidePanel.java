@@ -41,6 +41,9 @@ public class SidePanel extends javax.swing.JPanel {
         bnSale = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        bnTransactions = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         bnDashboard = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -81,7 +84,6 @@ public class SidePanel extends javax.swing.JPanel {
         bnSale.setMaximumSize(new java.awt.Dimension(380, 78));
         bnSale.setMinimumSize(new java.awt.Dimension(380, 78));
         bnSale.setPreferredSize(new java.awt.Dimension(380, 78));
-        bnSale.setSize(new java.awt.Dimension(380, 78));
         bnSale.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bnSaleMouseClicked(evt);
@@ -116,13 +118,51 @@ public class SidePanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        bnTransactions.setBackground(new java.awt.Color(237, 108, 112));
+        bnTransactions.setAlignmentX(0.0F);
+        bnTransactions.setAlignmentY(0.0F);
+        bnTransactions.setMaximumSize(new java.awt.Dimension(380, 78));
+        bnTransactions.setMinimumSize(new java.awt.Dimension(380, 78));
+        bnTransactions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bnTransactionsMouseClicked(evt);
+            }
+        });
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_transactions.png"))); // NOI18N
+
+        jLabel12.setFont(new java.awt.Font("Comfortaa", 0, 36)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Transactions");
+
+        javax.swing.GroupLayout bnTransactionsLayout = new javax.swing.GroupLayout(bnTransactions);
+        bnTransactions.setLayout(bnTransactionsLayout);
+        bnTransactionsLayout.setHorizontalGroup(
+            bnTransactionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bnTransactionsLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        bnTransactionsLayout.setVerticalGroup(
+            bnTransactionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bnTransactionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(bnTransactionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
         bnDashboard.setBackground(new java.awt.Color(237, 108, 112));
         bnDashboard.setAlignmentX(0.0F);
         bnDashboard.setAlignmentY(0.0F);
         bnDashboard.setMaximumSize(new java.awt.Dimension(380, 78));
         bnDashboard.setMinimumSize(new java.awt.Dimension(380, 78));
         bnDashboard.setPreferredSize(new java.awt.Dimension(380, 78));
-        bnDashboard.setSize(new java.awt.Dimension(380, 78));
         bnDashboard.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bnDashboardMouseClicked(evt);
@@ -161,7 +201,6 @@ public class SidePanel extends javax.swing.JPanel {
         bnEdit.setAlignmentX(0.0F);
         bnEdit.setAlignmentY(0.0F);
         bnEdit.setMaximumSize(new java.awt.Dimension(380, 78));
-        bnEdit.setSize(new java.awt.Dimension(380, 78));
         bnEdit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bnEditMouseClicked(evt);
@@ -201,7 +240,6 @@ public class SidePanel extends javax.swing.JPanel {
         bnSetting.setAlignmentY(0.0F);
         bnSetting.setMaximumSize(new java.awt.Dimension(380, 78));
         bnSetting.setMinimumSize(new java.awt.Dimension(380, 78));
-        bnSetting.setSize(new java.awt.Dimension(380, 78));
         bnSetting.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bnSettingMouseClicked(evt);
@@ -241,7 +279,6 @@ public class SidePanel extends javax.swing.JPanel {
         bnQuit.setAlignmentY(0.0F);
         bnQuit.setMaximumSize(new java.awt.Dimension(380, 78));
         bnQuit.setMinimumSize(new java.awt.Dimension(380, 78));
-        bnQuit.setSize(new java.awt.Dimension(380, 78));
         bnQuit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bnQuitMouseClicked(evt);
@@ -293,33 +330,34 @@ public class SidePanel extends javax.swing.JPanel {
         sidepanel.setLayout(sidepanelLayout);
         sidepanelLayout.setHorizontalGroup(
             sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sidepanelLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(name))
+            .addComponent(bnSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bnTransactions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(bnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(bnSetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(bnQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(sidepanelLayout.createSequentialGroup()
-                .addGroup(sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sidepanelLayout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(time))
-                    .addGroup(sidepanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(name))
-                    .addGroup(sidepanelLayout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addGroup(sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(coppyright)
-                            .addComponent(date))))
-                .addGap(0, 20, Short.MAX_VALUE))
-            .addComponent(bnSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(270, 270, 270)
+                .addComponent(time))
+            .addGroup(sidepanelLayout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addComponent(date))
+            .addGroup(sidepanelLayout.createSequentialGroup()
+                .addGap(183, 183, 183)
+                .addComponent(coppyright))
         );
         sidepanelLayout.setVerticalGroup(
             sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidepanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(name)
-                .addGap(46, 46, 46)
+                .addGap(26, 26, 26)
                 .addComponent(bnSale, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(bnTransactions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
                 .addComponent(bnDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
@@ -328,13 +366,12 @@ public class SidePanel extends javax.swing.JPanel {
                 .addComponent(bnSetting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
                 .addComponent(bnQuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92)
+                .addGap(32, 32, 32)
                 .addComponent(time)
                 .addGap(9, 9, 9)
                 .addComponent(date)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(coppyright, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addComponent(coppyright, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         add(sidepanel);
@@ -344,7 +381,6 @@ public class SidePanel extends javax.swing.JPanel {
         window.setMaximumSize(new java.awt.Dimension(986, 768));
         window.setMinimumSize(new java.awt.Dimension(986, 768));
         window.setPreferredSize(new java.awt.Dimension(986, 768));
-        window.setSize(new java.awt.Dimension(986, 768));
         window.setLayout(new java.awt.CardLayout());
         add(window);
         window.setBounds(380, 0, 1080, 768);
@@ -359,6 +395,7 @@ public class SidePanel extends javax.swing.JPanel {
         resetColor(bnDashboard);
         resetColor(bnEdit);
         resetColor(bnSetting);
+        resetColor(bnTransactions);
 
         window.removeAll();
         window.repaint();
@@ -379,6 +416,7 @@ public class SidePanel extends javax.swing.JPanel {
         resetColor(bnDashboard);
         resetColor(bnEdit);
         resetColor(bnSetting);
+        resetColor(bnTransactions);
 
         window.removeAll();
         window.repaint();
@@ -396,6 +434,7 @@ public class SidePanel extends javax.swing.JPanel {
         resetColor(bnSale);
         resetColor(bnEdit);
         resetColor(bnSetting);
+        resetColor(bnTransactions);
 
         window.removeAll();
         window.repaint();
@@ -417,6 +456,7 @@ public class SidePanel extends javax.swing.JPanel {
             resetColor(bnSale);
             resetColor(bnDashboard);
             resetColor(bnSetting);
+            resetColor(bnTransactions);
 
             window.removeAll();
             window.repaint();
@@ -439,6 +479,7 @@ public class SidePanel extends javax.swing.JPanel {
             resetColor(bnSale);
             resetColor(bnDashboard);
             resetColor(bnEdit);
+            resetColor(bnTransactions);
 
             window.removeAll();
             window.repaint();
@@ -462,6 +503,24 @@ public class SidePanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_bnQuitMouseClicked
 
+    private void bnTransactionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnTransactionsMouseClicked
+        // TODO add your handling code here:
+        setColor(bnTransactions);
+        resetColor(bnQuit);
+        resetColor(bnSale);
+        resetColor(bnEdit);
+        resetColor(bnSetting);
+        resetColor(bnDashboard);
+
+        window.removeAll();
+        window.repaint();
+        window.revalidate();
+
+        window.add(new Transactions(window));
+        window.repaint();
+        window.revalidate();
+    }//GEN-LAST:event_bnTransactionsMouseClicked
+
     private void setColor(JPanel panel) {
         panel.setBackground(new Color(224, 70, 84));
     }
@@ -476,10 +535,13 @@ public class SidePanel extends javax.swing.JPanel {
     private javax.swing.JPanel bnQuit;
     private javax.swing.JPanel bnSale;
     private javax.swing.JPanel bnSetting;
+    private javax.swing.JPanel bnTransactions;
     private javax.swing.JLabel coppyright;
     private javax.swing.JLabel date;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

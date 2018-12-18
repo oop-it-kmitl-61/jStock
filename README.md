@@ -126,10 +126,10 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 ![search2](https://user-images.githubusercontent.com/32861458/50141467-1fbb3780-02da-11e9-82a6-fe20bcbb72df.png)
 
 *To sale the products you need to click the Add button of the product that you want to sale and then click Sale button to go to summary page.*
-![sold](https://user-images.githubusercontent.com/32861458/50140980-e7ffc000-02d8-11e9-92cc-82fc10109936.png)
+![sold](https://user-images.githubusercontent.com/32861458/50159769-1053e280-030a-11e9-8c37-d747a7a98e3f.png)
 
 *After clicking Sale button the program will show this dialog to confirm to sale.*
-![recipe](https://user-images.githubusercontent.com/32861458/50141837-1c747b80-02db-11e9-8bb4-205c222f280b.png)
+![reciept](https://user-images.githubusercontent.com/32861458/50159771-10ec7900-030a-11e9-9573-7bd2a4b72cf3.png)
 
 *If there are not enough product, the program will show this dialog and can't sale products when you click sale.*
 ![out of stock](https://user-images.githubusercontent.com/32861458/50116884-12705f80-027e-11e9-99ff-1155b39d0d29.png)
@@ -138,11 +138,11 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 ![sale3](https://user-images.githubusercontent.com/32861458/50140982-e9c98380-02d8-11e9-9559-da5b2e49061a.png)
 
 *You can see all of transactions by clicking at Transactions button then the program will direct to transactions page.*
-![transaction page](https://user-images.githubusercontent.com/32861458/50140983-e9c98380-02d8-11e9-9694-c4e63e381810.png)
+![transactions page](https://user-images.githubusercontent.com/32861458/50159773-10ec7900-030a-11e9-882b-2e739f0281cf.png)
 
 *To view more detail of transaction you need to click at view button in View column the program will show this transaction's information dialog.*
 
-![view transaction](https://user-images.githubusercontent.com/32861458/50141835-1c747b80-02db-11e9-95e0-356ecb724168.png)
+![view transaction](https://user-images.githubusercontent.com/32861458/50159775-11850f80-030a-11e9-90f9-c7932b0f4e94.png)
 
 *To check profits you need to click Dashboard button, the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
 ![dashboard](https://user-images.githubusercontent.com/32861458/50140987-ea621a00-02d8-11e9-9f4f-c6e6d8f0b229.png)
@@ -154,15 +154,17 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 ![quit](https://user-images.githubusercontent.com/32861458/50117307-32545300-027f-11e9-9642-9fdb20d0d4df.png)
 
 ## 👩‍💻  Author  👨‍💻
-|  |StudentID|Name|Surname|GitHub|
-|:-:|--|--|--|--|
-|![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|60070073|Passawit|Riewthong|[@dekdew](https://github.com/dekdew)|
-|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|60070076|Mareena|Nuramun|[@skefolksy](https://github.com/skefolksy)|
-|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|60070114|Apisit|Wetmaha|[@Apisit60070114](https://github.com/Apisit60070114)|
+|![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|
+|:-:|:-:|:-:|
+|60070073|60070076|60070114|
+|Passawit|Mareena|Apisit|
+|Riewthong|Nuramun|Wetmaha|
+|[@dekdew](https://github.com/dekdew)|[@skefolksy](https://github.com/skefolksy)|[@Apisit60070114](https://github.com/Apisit60070114)|
 
 ## 👩‍🏫 Supervisor
-|![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|Asst.prof. Thanisa Numnonda, Ph.D.|
-|--|--|
+|![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|
+|:-:|
+|Asst.prof. Thanisa Numnonda, Ph.D.|
 
 ---
 06016317 OBJECT-ORIENTED PROGRAMMING

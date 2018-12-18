@@ -11,12 +11,12 @@
 
 ### 🗄 Database structure
 	// User structure
-	{
-		name: "jStock",
-		password: "pcNf4sPc",
-		products: 44,
-		transactions: 112,
-	}
+		{
+			name: "jStock",
+			password: "pcNf4sPc",
+			products: 44,
+			transactions: 112,
+		}
 	
 	// Stock structure
 		[{
@@ -29,23 +29,23 @@
 		}]
 
 	// Transactions structure
-	[{
-		transactionID: "000000000",
-		date: {
-			day: "18",
-			month: "12",
-			year: "2018"
-		},
-		sDate: "18/12/2012",
-		time: "23:59:59", total: 2000,
-		products: [{
-			productID: "00000",
-			productName: "submarine",
-			productPrice: 1000,
-			quantity: 2,
-			amount:2000
-		}
-	}]
+		[{
+			transactionID: "000000000",
+			date: {
+				day: "18",
+				month: "12",
+				year: "2018"
+			},
+			sDate: "18/12/2012",
+			time: "23:59:59", total: 2000,
+			products: [{
+				productID: "00000",
+				productName: "submarine",
+				productPrice: 1000,
+				quantity: 2,
+				amount:2000
+			}
+		}]
 
 ## 📍 Getting Started
 ### 🛠 Prerequisites

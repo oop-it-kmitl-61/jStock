@@ -137,6 +137,7 @@
 ![transaction page](https://user-images.githubusercontent.com/32861458/50140983-e9c98380-02d8-11e9-9694-c4e63e381810.png)
 
 *To view more detail of transaction you need to click at view button in View column the program will show this transaction's information dialog.*
+
 ![view transaction](https://user-images.githubusercontent.com/32861458/50141835-1c747b80-02db-11e9-95e0-356ecb724168.png)
 
 *When you sale successful the program will back to Sale page and product amount has reduced.*

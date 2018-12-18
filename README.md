@@ -133,15 +133,15 @@
 *If products have not enough when you click sale the program will show this dialog and can't sale products.*
 ![out of stock](https://user-images.githubusercontent.com/32861458/50116884-12705f80-027e-11e9-99ff-1155b39d0d29.png)
 
+*When you sale successful the program will back to Sale page and product amount has reduced.*
+![sale3](https://user-images.githubusercontent.com/32861458/50140982-e9c98380-02d8-11e9-9559-da5b2e49061a.png)
+
 *You can see all of transactions by clicking at Transactions button the program will direct to transactions page.*
 ![transaction page](https://user-images.githubusercontent.com/32861458/50140983-e9c98380-02d8-11e9-9694-c4e63e381810.png)
 
 *To view more detail of transaction you need to click at view button in View column the program will show this transaction's information dialog.*
 
 ![view transaction](https://user-images.githubusercontent.com/32861458/50141835-1c747b80-02db-11e9-95e0-356ecb724168.png)
-
-*When you sale successful the program will back to Sale page and product amount has reduced.*
-![sale3](https://user-images.githubusercontent.com/32861458/50140982-e9c98380-02d8-11e9-9559-da5b2e49061a.png)
 
 *To check profits you need to click Dashboard button the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
 ![dashboard](https://user-images.githubusercontent.com/32861458/50140987-ea621a00-02d8-11e9-9f4f-c6e6d8f0b229.png)

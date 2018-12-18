@@ -157,13 +157,14 @@ With a variety of functions. Caring for a shop will be easier from now on. **jSt
 |![](https://avatars3.githubusercontent.com/u/32861458?s=150&v=4)|![](https://avatars2.githubusercontent.com/u/32717103?s=150&v=4)|![](https://avatars3.githubusercontent.com/u/32724812?s=150&v=4)|
 |:-:|--|--|
 |60070073|60070076|60070114|
-|Passawit|Passawit|Apisit|
+|Passawit|Mareena|Apisit|
 |Riewthong|Nuramun|Wetmaha|
 |[@dekdew](https://github.com/dekdew)|[@skefolksy](https://github.com/skefolksy)|[@Apisit60070114](https://github.com/Apisit60070114)|
 
 ## 👩‍🏫 Supervisor
-|![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|Asst.prof. Thanisa Numnonda, Ph.D.|
-|--|--|
+|![](https://avatars3.githubusercontent.com/u/25024858?s=150&v=4)|
+|--|
+|Asst.prof. Thanisa Numnonda, Ph.D.|
 
 ---
 06016317 OBJECT-ORIENTED PROGRAMMING

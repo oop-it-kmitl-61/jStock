@@ -81,10 +81,10 @@
 ![loading](https://user-images.githubusercontent.com/32861458/50114203-8c9ce600-0276-11e9-85f5-3cea8bf639ea.png)
 
 *For the first time you need to create new stock.*
-![create stock](https://user-images.githubusercontent.com/32861458/50114507-3d0aea00-0277-11e9-83d3-153f7fc51e72.png)
+![create stock](https://user-images.githubusercontent.com/32861458/50142150-eedc0200-02db-11e9-8b8f-9110c3ffed73.png)
 
 *Welcome page will append when stock created successful.*
-![welcome](https://user-images.githubusercontent.com/32861458/50114630-94a95580-0277-11e9-90c3-e0743ca98863.png)
+![welcome](https://user-images.githubusercontent.com/32861458/50142155-f13e5c00-02db-11e9-8434-d66a4473c4f1.png)
 
 *For the next time the program will direct to sale page.*
 ![sale1](https://user-images.githubusercontent.com/32861458/50140973-e635fc80-02d8-11e9-97ac-c7c2988902e2.png)

@@ -6,6 +6,7 @@
 ### ✏️ Functional Specification
  - Sale products.
  - Add/Edit product (This function is only for store owners or managers).
+ - Transactions.
  - Sales Analysis.
 
 ### 🗄 Database structure

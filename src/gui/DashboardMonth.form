@@ -213,7 +213,7 @@
           <Color blue="bd" green="bd" red="bd" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="text" type="java.lang.String" value="Total oders:"/>
+        <Property name="text" type="java.lang.String" value="Total orders:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbTotalOders">

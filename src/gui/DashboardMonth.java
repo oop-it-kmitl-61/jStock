@@ -114,7 +114,7 @@ public class DashboardMonth extends javax.swing.JPanel {
         lbTotalOdersDes.setFont(new java.awt.Font("PT Mono", 0, 24)); // NOI18N
         lbTotalOdersDes.setForeground(new java.awt.Color(189, 189, 189));
         lbTotalOdersDes.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lbTotalOdersDes.setText("Total oders:");
+        lbTotalOdersDes.setText("Total orders:");
 
         lbTotalOders.setFont(new java.awt.Font("Comfortaa", 0, 24)); // NOI18N
         lbTotalOders.setForeground(new java.awt.Color(168, 80, 204));

@@ -113,7 +113,7 @@ public class DashboardDay extends javax.swing.JPanel {
         lbTotalOdersDes.setFont(new java.awt.Font("PT Mono", 0, 24)); // NOI18N
         lbTotalOdersDes.setForeground(new java.awt.Color(189, 189, 189));
         lbTotalOdersDes.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lbTotalOdersDes.setText("Total oders:");
+        lbTotalOdersDes.setText("Total orders:");
 
         lbTotalOders.setFont(new java.awt.Font("Comfortaa", 0, 24)); // NOI18N
         lbTotalOders.setForeground(new java.awt.Color(168, 80, 204));
@@ -363,30 +363,12 @@ public class DashboardDay extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable allProducts;
-    private javax.swing.JPanel bnCancel1;
-    private javax.swing.JPanel bnCancel2;
-    private javax.swing.JPanel bnCancel3;
-    private javax.swing.JPanel bnCancel4;
-    private javax.swing.JPanel bnCancel5;
-    private javax.swing.JPanel bnCancel6;
-    private javax.swing.JPanel bnCancel7;
-    private javax.swing.JPanel bnCancel8;
-    private javax.swing.JPanel bnCancel9;
     private javax.swing.JPanel bnDay;
     private javax.swing.JPanel bnMonth;
     private javax.swing.JPanel bnYear;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbBestDes;
-    private javax.swing.JLabel lbCancel1;
-    private javax.swing.JLabel lbCancel2;
-    private javax.swing.JLabel lbCancel3;
-    private javax.swing.JLabel lbCancel4;
-    private javax.swing.JLabel lbCancel5;
-    private javax.swing.JLabel lbCancel6;
-    private javax.swing.JLabel lbCancel7;
-    private javax.swing.JLabel lbCancel8;
-    private javax.swing.JLabel lbCancel9;
     private javax.swing.JLabel lbDate;
     private javax.swing.JLabel lbDay;
     private javax.swing.JLabel lbMonth;

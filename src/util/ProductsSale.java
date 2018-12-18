@@ -13,10 +13,10 @@ import java.util.ArrayList;
  */
 public class ProductsSale {
     private ArrayList<ProductSale> products = new ArrayList<>();
-    private boolean flag = true;
+    private boolean flag;
     
     public void addProduct(ProductSale product) {
-        
+        flag = true;
         try {
             for (int i=0; i<products.size(); i++) {
                 if (product.getProductID().equals(products.get(i).getProductID())) {
@@ -26,8 +26,8 @@ public class ProductsSale {
             }
         } catch (Exception e) {
         }
-        
         if (flag) {
+            System.out.println("6666");
             products.add(product);
         }
         

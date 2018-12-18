@@ -1,3 +1,4 @@
+
 # jStock
 &nbsp;&nbsp;&nbsp; Caring for a shop will be easier from now on. **jStock**, a java project for Object-Oriented Programming 2018, will help you to manage your both storefront and warehouse.
 
@@ -130,6 +131,9 @@
 
 *When you sale successful the program will back to Sale page and product amount has reduced.*
 ![sale3](https://user-images.githubusercontent.com/32861458/50117028-68450780-027e-11e9-9598-b958abb5ac89.png)
+
+*To check profits you need to click Dashboard button the program will direct to report by day. The report show total income, total orders, products amount(piece) and ranking of product best seller by day, mount or year.*
+![dashboard](https://user-images.githubusercontent.com/32861458/50130226-22ecfe00-02af-11e9-9764-e592cede6573.png)
 
 *You can also change store name and password by click at Setting button (this function require password like Edit page).*
 ![enter image description here](https://user-images.githubusercontent.com/32861458/50117173-ca057180-027e-11e9-9433-5cb89d9ca1e0.png)
